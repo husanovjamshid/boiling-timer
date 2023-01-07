@@ -1,6 +1,7 @@
 let elForm = document.querySelector(".js-form");
 let elInput = document.querySelector(".js-input");
 let elAlert = document.querySelector(".alert");
+let elAlert1 = document.querySelector(".alert1");
 let elList = document.querySelector(".lists");
 
 elForm.addEventListener("submit", (evt) => {
@@ -13,7 +14,15 @@ elForm.addEventListener("submit", (evt) => {
       elAlert.classList.add("d-none");
     }, 3000);
 
-    return
+    return;
+  } else if (elInput.value < 0) {
+    elAlert1.classList.remove("d-none");
+
+    setTimeout(() => {
+      elAlert1.classList.add("d-none");
+    }, 3000);
+
+    return;
   }
 
   let newItem = document.createElement("li");
@@ -25,8 +34,8 @@ elForm.addEventListener("submit", (evt) => {
     if (count == 0) {
       newItem.classList.add("d-none");
     }
+    count -= 1;
     newItem.textContent = count;
-    count--;
   }, 1000);
 
   elList.appendChild(newItem);
