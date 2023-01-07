@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: blue;
+}
+
+.box {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 120px;
+}
+
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid rgb(139, 130, 130);
+  transition: all 0.4s ease;
+}
+
+input:focus {
+  border-bottom-color: black;
+}
+
+button {
+  border: 0;
+  padding: 10px;
+}
+
+.timeOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: coral;
+  color: #fff;
+  padding: 10px;
+  animation:  1s ease infinite;
+  animation-name: cube;
+}
+
+.timeOut + .timeOut {
+    margin-left: 15px;
+}
+
+@keyframes cube {
+  0% {
+    transform: scale(1, 1);
+    
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+   
+  }
+  100% {
+    transform: scale(1, 1);
+    
+  }
+}
+
+/* .none {
+  display: none;
+} */
